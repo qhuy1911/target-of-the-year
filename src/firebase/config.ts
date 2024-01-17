@@ -1,7 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 // Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app'
-import { getAnalytics } from 'firebase/analytics'
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -15,8 +14,8 @@ const firebaseConfig = {
   messagingSenderId: '624269696739',
   appId: '1:624269696739:web:336e911ca5c28bcef32fd6',
   measurementId: 'G-5XWQPEN1YX'
-}
+};
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig)
-getAnalytics(app)
+const app = initializeApp(firebaseConfig);
+getAnalytics(app);
