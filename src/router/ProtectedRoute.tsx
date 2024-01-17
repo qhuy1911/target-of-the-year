@@ -1,14 +1,14 @@
-import React from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
+import React from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const ProtectedRoute: React.FC = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   if (!localStorage.getItem('accessToken')) {
-    navigate('/login')
+    navigate('/login');
   }
 
-  return <Outlet />
-}
+  return <Outlet />;
+};
 
-export default ProtectedRoute
+export default ProtectedRoute;
