@@ -1,6 +1,6 @@
-name: Continous Integration
+name: Continuous Integration
 
-# this is trigeer CI on push and PR for main branch only
+# this is trigger CI on push and PR for main branch only
 # on:
 #   push:
 #     branches: [ main ]
@@ -8,29 +8,28 @@ name: Continous Integration
 #     branches: [ main ]
 
 # this is trigger CI on all kinds of branches and PRs
-
 on:
   push:
   pull_request:
 
 jobs:
   build:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Fetch all history for all branches and tags
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '20.9.0'
 
-      - name: Install Deps
+      - name: Install dependencies
         run: npm install
 
-      - name: Run linters
+      - name: Run lint
         run: npm run lint
 
-      - name: Run formatter
+      - name: Run format check
         run: npm run format
