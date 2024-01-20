@@ -9,9 +9,6 @@ const ErrorPage: React.FC = () => {
     <>
       <h1>Error Page</h1>
       <p>Sorry, an unexpected has occurred.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
     </>
   );
 };

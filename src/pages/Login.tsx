@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Login: React.FC = () => {
   const auth = getAuth();
-  const { user } = useContext(AuthContext);
-  console.log(user);
+  const context = useContext(AuthContext);
+  console.log(context?.user);
   const navigate = useNavigate();
 
   const handleLoginWithGoogle = async () => {
@@ -16,7 +16,7 @@ const Login: React.FC = () => {
     // console.log(res)
   };
 
-  if (user?.uid) {
+  if (context?.user?.uid) {
     navigate('/');
     return;
   }
